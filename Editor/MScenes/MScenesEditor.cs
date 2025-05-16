@@ -1,15 +1,15 @@
-﻿using System;
+﻿#if ODIN_INSPECTOR
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Plugins.MorfeyTools.Editor.Data;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities.Editor;
 using UnityEditor;
 using UnityEngine;
 
-namespace Plugins.MorfeyTools.Editor.MScenes
+namespace MorfeyTools.Editor
 {
   [Serializable]
   public partial class MScenesEditor : IDisposable
@@ -100,7 +100,6 @@ namespace Plugins.MorfeyTools.Editor.MScenes
 
     private void DrawOtherScenesTitleBarGUI()
     {
-      GUILayout.Label("All Other Scenes", EditorStyles.boldLabel);
       GUILayout.FlexibleSpace();
 
       if (SirenixEditorGUI.IconButton(EditorIcons.Refresh, 24, (int)EditorGUIUtility.singleLineHeight + 2, "Refresh scene list"))
@@ -227,3 +226,4 @@ namespace Plugins.MorfeyTools.Editor.MScenes
     }
   }
 }
+#endif

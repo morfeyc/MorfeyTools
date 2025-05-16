@@ -1,6 +1,6 @@
 {
     "name": "MorfeyTools.Editor",
-    "rootNamespace": "",
+    "rootNamespace": "MorfeyTools.Editor",
     "references": [
         "Sirenix.OdinInspector.Attributes",
         "Sirenix.OdinInspector.Editor",

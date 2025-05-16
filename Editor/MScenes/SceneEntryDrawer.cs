@@ -1,10 +1,11 @@
-﻿using Sirenix.OdinInspector;
+﻿#if ODIN_INSPECTOR
+using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities.Editor;
 using UnityEditor;
 using UnityEngine;
 
-namespace Plugins.MorfeyTools.Editor.MScenes
+namespace MorfeyTools.Editor
 {
   public class SceneEntryDrawer : OdinValueDrawer<MScenesEditor.SceneEntry>
   {
@@ -69,3 +70,4 @@ namespace Plugins.MorfeyTools.Editor.MScenes
     }
   }
 }
+#endif

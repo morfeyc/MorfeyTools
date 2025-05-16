@@ -1,14 +1,15 @@
-﻿using System.IO;
+﻿#if ODIN_INSPECTOR
+using System.IO;
 using System.Linq;
-using Plugins.MorfeyTools.Editor.Data;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 // ReSharper disable InconsistentNaming
 // Add this for SceneManager
 
-namespace Plugins.MorfeyTools.Editor.MBootsrtap
+namespace MorfeyTools.Editor
 {
   [InitializeOnLoad]
   public static class PlayModeStartScene
@@ -269,3 +270,4 @@ namespace Plugins.MorfeyTools.Editor.MBootsrtap
       => IsEnabled ? "<color=#7fff00>enabled</color>" : "<color=#ffa500>disabled</color>";
   }
 }
+#endif

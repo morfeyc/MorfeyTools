@@ -1,10 +1,11 @@
-﻿using System.IO;
+﻿#if ODIN_INSPECTOR
+using System.IO;
 using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 
-namespace Plugins.MorfeyTools.Editor.MBootsrtap
+namespace MorfeyTools.Editor
 {
   public class MBootstrapEditor
   {
@@ -241,3 +242,4 @@ namespace Plugins.MorfeyTools.Editor.MBootsrtap
     }
   }
 }
+#endif

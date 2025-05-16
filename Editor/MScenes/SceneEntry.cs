@@ -1,9 +1,10 @@
-﻿using System;
+﻿#if ODIN_INSPECTOR
+using System;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace Plugins.MorfeyTools.Editor.MScenes
+namespace MorfeyTools.Editor
 {
   public partial class MScenesEditor
   {
@@ -55,3 +56,4 @@ namespace Plugins.MorfeyTools.Editor.MScenes
     }
   }
 }
+#endif

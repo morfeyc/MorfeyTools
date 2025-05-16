@@ -1,4 +1,4 @@
-﻿namespace Plugins.MorfeyTools.Editor.MBootsrtap
+﻿namespace MorfeyTools.Editor
 {
   public static class MBootstrapEditorStrings
   {

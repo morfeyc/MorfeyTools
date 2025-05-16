@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace Plugins.MorfeyTools.Editor.Data
+namespace MorfeyTools.Editor
 {
   public class SceneExplorerData : ScriptableObject
   {

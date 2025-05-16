@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Plugins.MorfeyTools.Editor.Data
+namespace MorfeyTools.Editor
 {
   public class BootstrapSettingsData : ScriptableObject
   {

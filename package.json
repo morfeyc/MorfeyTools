@@ -2,7 +2,7 @@
 {
 	"name": "com.morfeyc.morfeytools",
 	"displayName": "MorfeyTools",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"description": "QoL tools for projects. Odin Inspector required",
 	"dependencies": {}
 }
