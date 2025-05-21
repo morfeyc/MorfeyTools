@@ -1,6 +1,6 @@
 {
-	"name": "com.morfeyc.morfeytools",
-	"displayName": "MorfeyTools",
+	"name": "com.morfeyc.morfeyctools",
+	"displayName": "MorfeycTools",
 	"version": "0.0.4",
 	"description": "QoL tools for projects. Odin Inspector required",
 	"keywords": [
