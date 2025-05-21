@@ -1,4 +1,4 @@
-﻿namespace MorfeyTools.Editor.Plugins.MorfeyTools.Editor.MConfigs
+﻿namespace MorfeyTools.Editor.MConfigs
 {
   public class MConfigsEditor
   {

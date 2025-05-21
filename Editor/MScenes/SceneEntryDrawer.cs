@@ -5,7 +5,7 @@ using Sirenix.Utilities.Editor;
 using UnityEditor;
 using UnityEngine;
 
-namespace MorfeyTools.Editor
+namespace MorfeyTools.Editor.MScenes
 {
   public class SceneEntryDrawer : OdinValueDrawer<MScenesEditor.SceneEntry>
   {

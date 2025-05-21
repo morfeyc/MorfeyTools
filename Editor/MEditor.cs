@@ -1,5 +1,7 @@
 ﻿#if ODIN_INSPECTOR
-using MorfeyTools.Editor.Plugins.MorfeyTools.Editor.MConfigs;
+using MorfeyTools.Editor.MBootsrtap;
+using MorfeyTools.Editor.MConfigs;
+using MorfeyTools.Editor.MScenes;
 using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;

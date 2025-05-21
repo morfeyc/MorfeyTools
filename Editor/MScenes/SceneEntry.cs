@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace MorfeyTools.Editor
+namespace MorfeyTools.Editor.MScenes
 {
   public partial class MScenesEditor
   {

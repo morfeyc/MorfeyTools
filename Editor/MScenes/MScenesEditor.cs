@@ -3,21 +3,21 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using MorfeyTools.Editor.Data;
+using MorfeyTools.Editor.DataManagement;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities.Editor;
 using UnityEditor;
 using UnityEngine;
 
-namespace MorfeyTools.Editor
+namespace MorfeyTools.Editor.MScenes
 {
   [Serializable]
   public partial class MScenesEditor : IDisposable
   {
     private Dictionary<string, SceneEntry> _allScenesCache = new();
     [NonSerialized] private bool _isRefreshing;
-    private const string SceneExplorerDataAssetName = "SceneExplorerData.asset";
-    private string SceneExplorerDataPath => Path.Combine(GetPluginRootPath(), "Data", SceneExplorerDataAssetName);
     private readonly MEditor _parentEditorWindow;
     private SceneExplorerData _data;
 
@@ -61,23 +61,7 @@ namespace MorfeyTools.Editor
 
     private void LoadOrCreateDataAsset()
     {
-      string path = SceneExplorerDataPath;
-      _data = AssetDatabase.LoadAssetAtPath<SceneExplorerData>(path);
-      if (_data == null)
-      {
-        Debug.Log($"[MScenesEditor] SceneExplorerData asset not found at {path}. Creating a new one.");
-        _data = ScriptableObject.CreateInstance<SceneExplorerData>();
-
-        string directory = Path.GetDirectoryName(path);
-        if (!Directory.Exists(directory))
-        {
-          Directory.CreateDirectory(directory!);
-        }
-
-        AssetDatabase.CreateAsset(_data, path);
-        AssetDatabase.SaveAssets();
-        Debug.Log($"[MScenesEditor] Created SceneExplorerData at {path}");
-      }
+      _data = PackageDataManager.LoadOrCreateDataAsset<SceneExplorerData>();
     }
 
     private void InitializeViewModelLists()

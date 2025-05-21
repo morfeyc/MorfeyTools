@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 
-namespace MorfeyTools.Editor
+namespace MorfeyTools.Editor.MBootsrtap
 {
   public class MBootstrapEditor
   {

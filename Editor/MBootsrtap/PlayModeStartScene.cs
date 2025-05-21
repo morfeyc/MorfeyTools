@@ -1,6 +1,8 @@
 ﻿#if ODIN_INSPECTOR
 using System.IO;
 using System.Linq;
+using MorfeyTools.Editor.Data;
+using MorfeyTools.Editor.DataManagement;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -9,7 +11,7 @@ using UnityEngine.SceneManagement;
 // ReSharper disable InconsistentNaming
 // Add this for SceneManager
 
-namespace MorfeyTools.Editor
+namespace MorfeyTools.Editor.MBootsrtap
 {
   [InitializeOnLoad]
   public static class PlayModeStartScene
@@ -35,24 +37,7 @@ namespace MorfeyTools.Editor
 
     private static void LoadOrCreateSettings()
     {
-      if (_settingsCache != null) return;
-      _settingsCache = AssetDatabase.LoadAssetAtPath<BootstrapSettingsData>(FullSettingsAssetPath);
-
-      if (_settingsCache == null)
-      {
-        Debug.LogWarning($"[{nameof(PlayModeStartScene)}] {SettingsAssetName} not found at {FullSettingsAssetPath}. Attempting to create a new one.");
-        if (!Directory.Exists(SettingsSOFolderPath))
-        {
-          Directory.CreateDirectory(SettingsSOFolderPath);
-          AssetDatabase.Refresh();
-        }
-
-        _settingsCache = ScriptableObject.CreateInstance<BootstrapSettingsData>();
-        AssetDatabase.CreateAsset(_settingsCache, FullSettingsAssetPath);
-        AssetDatabase.SaveAssets();
-        AssetDatabase.Refresh();
-        Debug.Log($"[{nameof(PlayModeStartScene)}] Created {SettingsAssetName} at {FullSettingsAssetPath}. Please review its default settings.");
-      }
+      _settingsCache = PackageDataManager.LoadOrCreateDataAsset<BootstrapSettingsData>();
     }
 
     private static void MarkSettingsDirty()

@@ -1,8 +1,13 @@
-
 {
 	"name": "com.morfeyc.morfeytools",
 	"displayName": "MorfeyTools",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "QoL tools for projects. Odin Inspector required",
-	"dependencies": {}
+	"keywords": [
+		"Tools"
+	],
+	"author": {
+		"name": "Morfeyc",
+		"url": "https://github.com/morfeyc"
+	}
 }
